@@ -10,6 +10,11 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+@font-face {
+  font-family: PTLight;
+  src: url("../fonts/FuturaPTLight.otf") format("opentype");
+}
+
 p {
   font-size: 13px;
   color: #7a7a7a;
@@ -177,7 +182,7 @@ header {
 /* Sidebar Style */
 
 .sidebar-navigation {
-  width: 22.5%;
+  width: 18%;
   float: left;
   height: 100%;
   position: fixed;
@@ -190,9 +195,9 @@ header {
   width: 100%;
   height: 140px;
   line-height: 100px;
-  background-color: #45489a;
   padding: 20px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .sidebar-navigation .logo a {
@@ -215,7 +220,7 @@ header {
 
 .sidebar-navigation nav {
   position: relative;
-  top: 40%;
+  top: 60%;
   left: 60%;
   -webkit-transform: translateX(-60%) translateY(-60%);
   -moz-transform: translateX(-60%) translateY(-60%);
@@ -229,7 +234,7 @@ header {
   padding: 0;
 }
 .sidebar-navigation li{
-  padding: 10px 0;
+  padding: 5px 0;
 }
 .sidebar-navigation span{
   display: inline-block;
@@ -269,7 +274,7 @@ header {
   color: #fff;
 }
 .sidebar-navigation nav a:hover, nav .active-section {
-  color: #fff;
+  color: #07cfbd !important;
 }
 .sidebar-navigation nav a:hover span, nav .active-section span{
   background-color: #ddd;
@@ -324,11 +329,11 @@ header {
 }
 
 .slider p a {
-	color: #FFF;
+	color: #07cfbd;
 }
 .slider p a:hover {
-	color: #FF0;
-	text-decoration: none;
+	color: #45489a;
+	text-decoration: underline;
 }
 
 .Modern-Slider .info {
@@ -1078,4 +1083,90 @@ header {
 /*************************************************/
 .navclass ul li{
   text-align: center
+}
+
+.fa-circle {
+  color: #2f3835;
+}
+
+.fa-circle:hover{
+  color: red;
+}
+
+.fa-facebook{
+  color: white;
+}
+
+.fa-facebook:hover{
+  color: white;
+}
+
+.fa-instagram{
+  color: white;
+}
+
+.fa-twitter{
+  color: white;
+}
+
+.logo-adjust{
+  position: relative;
+  width: inherit;
+}
+
+.logo-adjust image{
+    width: 100%;
+}
+
+.navclass ul li a{
+  font-family: PTLight;
+  font-size: 15px;
+}
+
+.navclass ul li a:hover{
+  color: #07cfbd;
+}
+
+.navclass ul li a .selected{
+  color: #07cfbd;
+}
+
+.txt-content{
+  text-align: left;
+  width: 90%;
+  padding-left: 35%;
+  margin-top: 7%;
+  padding-right: 5%;
+}
+
+h2 {
+  font-size: 42px;
+  color: #eef1eb;
+  font-family: PTLight;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 18px;
+  color: #eef1eb;
+  font-family: PTLight;
+  font-weight: normal;
+  text-align: center;
+}
+
+.ord p{
+  text-align: left;
+}
+
+.button {
+  display: block;
+  width: 150px;
+  height: 45px;
+  background: #2f3835;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
 }
