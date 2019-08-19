@@ -107,6 +107,10 @@ jQuery(document).ready(function($) {
         //     }, 800);
         // }
 
+        $("a").click(function(){
+            $("a.active-section").removeClass("active-section");
+            $(this).addClass("active-section");
+         });
 
         $('.button a[href*=#]').on('click', function(e) {
           e.preventDefault();

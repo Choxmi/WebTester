@@ -5,6 +5,9 @@ Sentra Template
 http://www.templatemo.com/tm-518-sentra
 
 */
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
