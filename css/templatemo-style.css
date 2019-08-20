@@ -1240,3 +1240,8 @@ td {
 h3 {
   color: #07cfbd;
 }
+
+h4 {
+  font-size: 18px;
+  font-variant-caps: all-petite-caps;
+}
