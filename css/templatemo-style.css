@@ -326,7 +326,7 @@ header {
   min-width: 100%;
   min-height: 100vh;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   text-align: center;
   background-color: #292B2A;
 }
@@ -1142,6 +1142,22 @@ header {
   padding-left: 15%;
 }
 
+.txt-pages{
+  border: 5px solid #eef1eb;
+  width: 60%;
+  height: 50%;
+  margin-left: 15%;
+}
+
+.txt-pages h2{
+  text-align: center;
+  padding: 10%;
+}
+
+.rect-wrapper {
+  padding-top: 15%;
+}
+
 h2 {
   font-size: 42px;
   color: #eef1eb;
@@ -1244,12 +1260,14 @@ h3 {
 h4 {
   font-size: 18px;
   font-variant-caps: all-petite-caps;
+  color: #07cfbd;
 }
 
 .card {
   width: 40%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
+  margin: 2%;
 }
 
 .card:hover {
@@ -1257,5 +1275,16 @@ h4 {
 }
 
 .container {
-  padding: 2px 16px;
+  padding: 2px 2px;
+  width:100%;
+  text-align: center;
+}
+
+.container p{
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.card-container {
+  display: flex;
 }
