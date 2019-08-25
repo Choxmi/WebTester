@@ -105,9 +105,9 @@ jQuery(document).ready(function($) {
         var item_count = 0;
         var arr = [];
         var food_arr = [
-            ['main_meal', 'Main Meal', 'demo'],
-            ['tapas', 'Tapas', 'demo'],
-            ['dessert', 'Dessert', 'demo']
+            ['main_meal', 'Main Meal', 'main_meal'],
+            ['tapas', 'Tapas', 'tapas'],
+            ['dessert', 'Dessert', 'dessert']
         ];
         var drinks_arr = [
             ['red_wine', 'Red Wine', 'demo'],
@@ -141,3 +141,49 @@ jQuery(document).ready(function($) {
         Loop(comps, 0, comps.length);
     });
 });
+
+var sections = $('section')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+ 
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+ 
+  sections.each(function() {
+    var top = $(this).offset().top - nav_height,
+        bottom = top + $(this).outerHeight();
+ 
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+      $("a.active-section").removeClass("active-section");
+      var section = $(this).attr('id');
+      switch(section){
+        case 'func':
+            console.log("In func");
+            section = 'functions';
+            break;
+        case 'menus':
+            section = 'menu';
+            break;
+        case 'whts':
+            section = 'whats';
+            break;
+      }
+      nav.find('a[href="#'+section+'"]').addClass('active-section');
+    }
+  });
+});
+
+function submitFeedback() {
+    console.log("Feedback");
+    $.ajax({
+        type: "POST",
+        url: "./php/feedback.php",
+        data: { subject: $('#subject').val(), comment: $('#comment').val(), name: $('#name').val(), email: $('#email').val(), contact: $('#contact').val() },
+        success: function(data)
+        {
+            alert(data);
+        }
+    });
+}
