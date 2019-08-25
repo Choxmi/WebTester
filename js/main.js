@@ -105,16 +105,16 @@ jQuery(document).ready(function($) {
         var item_count = 0;
         var arr = [];
         var food_arr = [
-            ['vegan', 'Main Meal', 'demo'],
-            ['vegan', 'Tapas', 'demo'],
-            ['vegan', 'Dessert', 'demo']
+            ['main_meal', 'Main Meal', 'demo'],
+            ['tapas', 'Tapas', 'demo'],
+            ['dessert', 'Dessert', 'demo']
         ];
         var drinks_arr = [
-            ['vegan', 'Red Wine', 'demo'],
-            ['vegan', 'White Wine', 'demo'],
-            ['vegan', 'Champagne', 'demo'],
-            ['vegan', 'Cocktail', 'demo'],
-            ['vegan', 'Mocktail', 'demo']
+            ['red_wine', 'Red Wine', 'demo'],
+            ['white_wine', 'White Wine', 'demo'],
+            ['champagne', 'Champagne', 'demo'],
+            ['cocktail', 'Cocktail', 'demo'],
+            ['mocktail', 'Mocktail', 'demo']
         ];
         $(".card").each(function() {
             $(this).removeClass("selected-card");
