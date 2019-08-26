@@ -1573,3 +1573,13 @@ label {
 .white {
     color: white;
 }
+
+@keyframes arrow-anim {
+    0% { margin-top: 0% }
+    50% { margin-top: 5%}
+    100% { margin-top: 0% }
+}
+
+.goto :hover {
+    animation: arrow-anim 1s linear 0s infinite alternate;
+}

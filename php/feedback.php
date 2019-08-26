@@ -8,6 +8,6 @@ $msg = wordwrap($msg,70);
 
 mail("gwcsathsara@gmail.com","Feedback",$msg,$headers);
 
-echo "Mailed ".$_POST['Message'];
+echo "Mailed ".$_POST['comment'];
 
 ?>

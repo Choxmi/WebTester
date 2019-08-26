@@ -73,10 +73,10 @@ jQuery(document).ready(function($) {
     var contentSection = $('.content-section, .main-banner');
     var navigation = $('nav');
 
-    $("a").click(function() {
-        $("a.active-section").removeClass("active-section");
-        $(this).addClass("active-section");
-    });
+    // $("a").click(function() {
+    //     $("a.active-section").removeClass("active-section");
+    //     $(this).addClass("active-section");
+    // });
 
     $('.button a[href*=#]').on('click', function(e) {
         e.preventDefault();
@@ -147,15 +147,15 @@ var sections = $('section')
   , nav_height = nav.outerHeight();
  
 $(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop();
+  var cur_pos = $(this).scrollTop() + ($(this).outerHeight()/2);
  
   sections.each(function() {
     var top = $(this).offset().top - nav_height,
         bottom = top + $(this).outerHeight();
  
     if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active');
-      sections.removeClass('active');
+      nav.find('a').removeClass('active-section');
+      sections.removeClass('active-section');
       $("a.active-section").removeClass("active-section");
       var section = $(this).attr('id');
       switch(section){
@@ -176,11 +176,10 @@ $(window).on('scroll', function () {
 });
 
 function submitFeedback() {
-    console.log("Feedback");
     $.ajax({
         type: "POST",
         url: "./php/feedback.php",
-        data: { subject: $('#subject').val(), comment: $('#comment').val(), name: $('#name').val(), email: $('#email').val(), contact: $('#contact').val() },
+        data: { subject: $('#subject').val(), comment: $('#comment').val(), name: $('#name').val(), email: $('#email').val(), contact: $('#contact_no').val() },
         success: function(data)
         {
             alert(data);
