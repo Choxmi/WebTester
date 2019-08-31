@@ -8,6 +8,7 @@ http://www.templatemo.com/tm-518-sentra
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -1448,7 +1449,7 @@ label {
 .flip-card {
     background-color: transparent;
     width: 33%;
-    height: 50vh;
+    height: 47vh;
     perspective: 1000px;
     padding: 2%;
 }
@@ -1477,10 +1478,8 @@ label {
     background-color:#292B2A;
     color: black;
     text-align: center;
-  }
-
-  .flip-card-front p {
-      padding-top: 45%;
+    display: flex;
+    align-items: center;
   }
   
   .flip-card-back {
@@ -1582,4 +1581,68 @@ label {
 
 .goto :hover {
     animation: arrow-anim 1s linear 0s infinite alternate;
+}
+
+.full-button {
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: #2f3835;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.full-button:hover{
+    cursor: pointer; 
+    background-color: #07cfbd;  
+}
+
+.flexer {
+    flex: 1 ;
+}
+
+.flexer p {
+    margin: 0;
+}
+
+.button-more {
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.button-more:hover {
+    background: #2f38357e;
+}
+
+.more-img {
+    height: 80%;
+}
+
+.offer {
+    width: 30% !important;
+}
+
+.justify {
+    justify-content: center !important;
+    width: 100%;
+    padding-left: 4%;
+    padding-top: 5%;
+}
+
+.bottom {
+    position: fixed;
+    bottom: 0;
+    width: 78%;
+    margin-left: 5%;
 }

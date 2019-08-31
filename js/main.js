@@ -110,11 +110,11 @@ jQuery(document).ready(function($) {
             ['dessert', 'Dessert', 'dessert']
         ];
         var drinks_arr = [
-            ['red_wine', 'Red Wine', 'demo'],
-            ['white_wine', 'White Wine', 'demo'],
-            ['champagne', 'Champagne', 'demo'],
-            ['cocktail', 'Cocktail', 'demo'],
-            ['mocktail', 'Mocktail', 'demo']
+            ['red_wine', 'Red Wine', 'red_wine'],
+            ['white_wine', 'White Wine', 'white_wine'],
+            ['champagne', 'Champagne', 'champagne'],
+            ['cocktail', 'Cocktail', 'cocktails'],
+            ['mocktail', 'Mocktail', 'mocktails']
         ];
         $(".card").each(function() {
             $(this).removeClass("selected-card");
@@ -167,6 +167,9 @@ $(window).on('scroll', function () {
             section = 'menu';
             break;
         case 'whts':
+            section = 'whats';
+            break;
+        case 'subscribe':
             section = 'whats';
             break;
       }
