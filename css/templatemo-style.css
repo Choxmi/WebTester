@@ -27,6 +27,18 @@ p {
     line-height: 24px;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 .page-content {
     width: 77.5%;
     float: right;
@@ -349,7 +361,7 @@ nav .active-section span {
     width: 100%;
     height: 100%;
     text-align: center;
-    background-color: #292B2A;
+    background-color: rgb(255, 255, 249);
 }
 
 .slider p a {
@@ -1217,24 +1229,26 @@ nav .active-section span {
     text-align: left;
     padding-top: 7%;
     padding-right: 5%;
-    padding-left: 15%;
+    padding-left: 10%;
 }
 
 .txt-pages {
     border: 5px solid #eef1eb;
     width: 60%;
-    height: 50%;
     display: inline-block;
+    background-color: #262626;
 }
 
 .txt-pages h2 {
+    margin-top: 10px;
     text-align: center;
     padding: 10%;
 }
 
 .rect-wrapper {
-    padding-top: 15%;
     text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 h2 {
@@ -1243,6 +1257,7 @@ h2 {
     font-family: PTLight;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 
 p {
@@ -1254,7 +1269,7 @@ p {
 }
 
 .ord p {
-    text-align: left;
+    text-align: center;
 }
 
 .button {
@@ -1274,6 +1289,26 @@ section {
 }
 
 .parallax {
+    background-image: url("../img/inside_.jpg");
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-menu {
+    background-image: url("../img/menu.jpg");
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-function {
     background-image: url("../img/inside.jpg");
     height: 100%;
     width: 100%;
@@ -1323,7 +1358,7 @@ section {
     align-self: center;
     width: 60%;
     overflow-wrap: break-word;
-    color: white;
+    color: #5c5c5c;
 }
 
 table {
@@ -1358,6 +1393,7 @@ h4 {
     transition: 0.3s;
     margin: 2%;
     cursor: pointer;
+    background-color: #262626;
 }
 
 .card:hover {
@@ -1387,6 +1423,7 @@ h4 {
 .card-container {
     display: flex;
     width: 80%;
+    padding-top: 5%;
 }
 
 .horiz {
@@ -1435,8 +1472,14 @@ label {
     opacity: 1;
 }
 
+.sub-item li.shows p {
+    color: #262626;
+}
+
 .section-content {
-    padding-top: 5%;
+    /* padding-top: 5%; */
+    display: table;
+    width: 100%;
 }
 
 .flip-container {
@@ -1451,7 +1494,7 @@ label {
     width: 33%;
     height: 47vh;
     perspective: 1000px;
-    padding: 2%;
+    padding: 0.5%;
 }
   
   .flip-card-inner {
@@ -1461,10 +1504,10 @@ label {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    transform: rotateY(180deg);
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
   }
   
   .flip-card-front, .flip-card-back {
@@ -1536,7 +1579,14 @@ label {
 }
 
 .about h2 {
-    padding: 5%;
+    margin-top: 0;
+    padding: 5% 5% 0 5%;
+}
+
+.about p {
+    margin-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .award-item {
@@ -1548,7 +1598,7 @@ label {
 }
 
 .cover {
-    background-color: #292B2A;
+    background-color: #fffff9;
     display: inline-block;
 }
 
@@ -1645,4 +1695,39 @@ label {
     bottom: 0;
     width: 78%;
     margin-left: 5%;
+}
+
+.mask {
+    background:
+    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+}
+
+.table-viewer {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.table-container {
+    display: table;
+    width: 100%;
+}
+
+.contact-para {
+    color: #262626;
+}
+
+.white-page h2 {
+    color: #262626;
+}
+
+.feedback-form {
+    width: 80%;
+    margin: 0 auto;
 }
