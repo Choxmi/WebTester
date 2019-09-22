@@ -142,40 +142,40 @@ jQuery(document).ready(function($) {
     });
 });
 
-var sections = $('section')
-  , nav = $('nav')
-  , nav_height = nav.outerHeight();
- 
-$(window).on('scroll', function () {
-  var cur_pos = $(this).scrollTop() + ($(this).outerHeight()/2);
- 
-  sections.each(function() {
-    var top = $(this).offset().top - nav_height,
-        bottom = top + $(this).outerHeight();
- 
-    if (cur_pos >= top && cur_pos <= bottom) {
-      nav.find('a').removeClass('active-section');
-      sections.removeClass('active-section');
-      $("a.active-section").removeClass("active-section");
-      var section = $(this).attr('id');
-      switch(section){
-        case 'func':
-            console.log("In func");
-            section = 'functions';
-            break;
-        case 'menus':
-            section = 'menu';
-            break;
-        case 'whts':
-            section = 'whats';
-            break;
-        case 'subscribe':
-            section = 'whats';
-            break;
-      }
-      nav.find('a[href="#'+section+'"]').addClass('active-section');
-    }
-  });
+var sections = $('section'),
+    nav = $('nav'),
+    nav_height = nav.outerHeight();
+
+$(window).on('scroll', function() {
+    var cur_pos = $(this).scrollTop() + ($(this).outerHeight() / 2);
+
+    sections.each(function() {
+        var top = $(this).offset().top - nav_height,
+            bottom = top + $(this).outerHeight();
+
+        if (cur_pos >= top && cur_pos <= bottom) {
+            nav.find('a').removeClass('active-section');
+            sections.removeClass('active-section');
+            $("a.active-section").removeClass("active-section");
+            var section = $(this).attr('id');
+            switch (section) {
+                case 'func':
+                    console.log("In func");
+                    section = 'functions';
+                    break;
+                case 'menus':
+                    section = 'menu';
+                    break;
+                case 'whts':
+                    section = 'whats';
+                    break;
+                case 'subscribe':
+                    section = 'whats';
+                    break;
+            }
+            nav.find('a[href="#' + section + '"]').addClass('active-section');
+        }
+    });
 });
 
 function submitFeedback() {
@@ -183,9 +183,26 @@ function submitFeedback() {
         type: "POST",
         url: "./php/feedback.php",
         data: { subject: $('#subject').val(), comment: $('#comment').val(), name: $('#name').val(), email: $('#email').val(), contact: $('#contact_no').val() },
-        success: function(data)
-        {
+        success: function(data) {
             alert(data);
         }
     });
+}
+
+function openNav() {
+    Swal.fire({
+        html: '<div class="cards-list"><a href="docs/main_meal.pdf" target="_blank"> <div class="subcard 1"> <div class="card_image"> <img src="img/main_meal.png" /> </div> <div class="card_title title-white"> <p>Main Meal</p> </div> </div> </a> <a href="docs/tapas.pdf" target="_blank"> <div class="subcard 1"> <div class="card_image"> <img src="img/tapas.png" /> </div> <div class="card_title title-white"> <p>Tapas</p> </div> </div> </a> <a href="docs/dessert.pdf" target="_blank"> <div class="subcard 1"> <div class="card_image"> <img src="img/dessert.png" /> </div> <div class="card_title title-white"> <p>Dessert</p> </div> </div> </a> </div>',
+    })
+}
+
+function expand() {
+    console.log("Expanding");
+    var height = $('#menu_container').height();
+    $('.overlay-modal').css('height', '' + height + '');
+}
+
+/* Close */
+function closeNav() {
+    $('.overlay-modal').css('display', 'none');
+    $('.overlay-modal').css('height', '0');
 }
