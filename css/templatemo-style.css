@@ -39,6 +39,12 @@ a:visited {
     text-decoration: none;
 }
 
+h3 {
+    font-style: italic;
+    margin-top: 0;
+    color: white;
+}
+
 .page-content {
     width: 77.5%;
     float: right;
@@ -362,6 +368,15 @@ nav .active-section span {
     height: 100%;
     text-align: center;
     background-color: rgb(255, 255, 249);
+}
+
+.slider .black-section {
+    padding-top: 0px;
+    min-width: 100%;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
 .slider p a {
@@ -1338,6 +1353,16 @@ section {
     background-size: cover;
 }
 
+.parallax-booking {
+    background-image: url("../img/booking_background.jpg");
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .page {
     height: 100%;
     min-height: 100vh;
@@ -1385,10 +1410,6 @@ td {
     border: 2px solid #292B2A;
     width: 20%;
     color: white;
-}
-
-h3 {
-    color: #07cfbd;
 }
 
 h4 {
@@ -1604,7 +1625,8 @@ label {
 
 .about h2 {
     margin-top: 0;
-    padding: 5% 5% 0 5%;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .about p {
@@ -1622,7 +1644,7 @@ label {
 }
 
 .cover {
-    background-color: #fffff9;
+    /* background-color: #fffff9; */
     display: inline-block;
 }
 
@@ -1667,12 +1689,13 @@ label {
     display: block;
     width: 100%;
     height: 45px;
-    background: #2f3835;
+    background: white;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    color: white;
+    color: #262626;
     font-weight: bold;
+    border-radius: 0;
 }
 
 .full-button:hover {
@@ -2020,7 +2043,7 @@ ul.nutrition li.value {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: #008CBA;
+    background-color: #008cba75;
 }
 
 .menucontainer:hover .overlay {
